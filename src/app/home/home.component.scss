@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background-image: url('/assets/images/hero.jpg');
+  background-image: url('/assets/images/hero-desktop.jpg');
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -14,11 +14,10 @@
     left: 0;
     transform: translateY(-50%);
     width: 100%;
-    background-color: rgba(60, 60, 60, 0.5); // füstös szürke
+    background-color: rgba(60, 60, 60, 0.5);
     padding: 0.5rem 0;
     display: flex;
     justify-content: center;
-    //backdrop-filter: blur(2px);
 
     .hero-text {
       text-align: center;
@@ -40,4 +39,22 @@
       }
     }
   }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('/assets/images/hero-mobile.jpg');
+  }
+
+  .hero-name {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    letter-spacing: 1.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+
 }
