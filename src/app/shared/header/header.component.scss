@@ -1,0 +1,109 @@
+.header {
+  background-color: #F5F0E6;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-and-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.logo {
+  height: 90px;
+  object-fit: contain;
+  display: block;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #4B3F2F;
+  cursor: pointer;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #4B3F2F;
+  transition: transform 0.3s ease-out, color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.nav ul li a:hover {
+  //color: #C7D3C0;
+  transform: scale(1.05);
+  color: #7A8450;
+  //color: #9BA88D;
+  //color: #5F6F52;
+  cursor: pointer;
+}
+
+.nav ul li a.active {
+  color: #7A8450;
+}
+
+
+.nav.open ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+// Mobilnézet
+@media (max-width: 768px) {
+  .header .hamburger {
+    display: block;
+  }
+
+  .header .logo-and-nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header .nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header .nav ul li a {
+    padding: 0.75rem 1rem;
+    display: inline-block;
+  }
+
+  .header .nav.open ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 70px;
+  }
+}
