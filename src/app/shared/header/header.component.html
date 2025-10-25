@@ -1,1 +1,27 @@
-<p>header works!</p>
+<header class="header">
+  <div class="logo-and-nav">
+    <a
+      routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <img src="assets/images/logo.png" alt="BSK Interior & Design logó" class="logo" />
+    </a>
+
+    <button class="hamburger" (click)="toggleMenu()" aria-label="Menü megnyitása">
+      &#9776;
+    </button>
+
+    <nav class="nav" [ngClass]="{ 'open': menuOpen }">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active"
+        >Rólam</a></li>
+        <li><a routerLink="/gallery" routerLinkActive="active"
+        >Galéria</a></li>
+        <li><a routerLink="/prices" routerLinkActive="active"
+        >Árak</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active"
+        >Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
