@@ -1,8 +1,6 @@
 <header class="header">
   <div class="logo-and-nav">
-    <a
-      routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-    >
+    <a (click)="scrollToTop()">
       <img src="assets/images/logo.png" alt="BSK Interior & Design logó" class="logo" />
     </a>
 
@@ -12,8 +10,9 @@
 
     <nav class="nav" [ngClass]="{ 'open': menuOpen }">
       <ul>
-        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-        <li><a routerLink="/about" routerLinkActive="active"
+        <li><a routerLink="/" (click)="scrollToTop()" [class.active]="isHomeActive && !isAboutActive"
+        >Home</a></li>
+        <li><a routerLink="/" (click)="onAboutClick()" [class.active]="isAboutActive"
         >Rólam</a></li>
         <li><a routerLink="/gallery" routerLinkActive="active"
         >Galéria</a></li>
