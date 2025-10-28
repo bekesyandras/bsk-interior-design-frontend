@@ -7,6 +7,7 @@ import {AboutViewComponent} from './about-view/about-view.component';
 
 @NgModule({
   declarations: [AboutViewComponent],
+  exports: [AboutViewComponent],
   imports: [
     CommonModule,
     AboutRoutingModule
