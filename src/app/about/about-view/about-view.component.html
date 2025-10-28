@@ -1,1 +1,17 @@
-<p>about-view works!</p>
+<section class="about" *ngIf="content">
+  <h2 class="about__title">Rólam</h2>
+
+  <div class="about__layout">
+    <div class="about__image-wrapper">
+      <img
+        [src]="content.profileImageUrl"
+        alt="Budai Sarolta profilképe"
+        class="about__image"
+      />
+    </div>
+
+    <div class="about__text">
+      <p>{{ content.content }}</p>
+    </div>
+  </div>
+</section>
