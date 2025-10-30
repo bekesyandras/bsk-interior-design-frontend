@@ -21,4 +21,10 @@ export class ScrollService {
   setHeroVisible(isVisible: boolean): void {
     this.heroVisible$.next(isVisible);
   }
+
+  menuOpen$ = new BehaviorSubject<boolean>(false);
+
+  setMenuOpen(isOpen: boolean): void {
+    this.menuOpen$.next(isOpen);
+  }
 }

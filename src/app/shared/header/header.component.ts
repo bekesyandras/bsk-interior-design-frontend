@@ -37,6 +37,7 @@ export class HeaderComponent implements OnInit{
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+    this.scrollService.setMenuOpen(this.menuOpen);
   }
 
   onAboutClick(): void {

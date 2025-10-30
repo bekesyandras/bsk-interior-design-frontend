@@ -13,6 +13,7 @@ import {ScrollService} from '../shared/service/scroll.service';
 export class HomeComponent implements OnInit, AfterViewInit{
   @ViewChild('aboutSection') aboutSection!: ElementRef;
   @ViewChild('heroSection') heroSection!: ElementRef;
+  menuOpen = false;
 
   constructor(private scrollService: ScrollService, private scroller: ViewportScroller) {
   }
@@ -22,6 +23,10 @@ export class HomeComponent implements OnInit, AfterViewInit{
       setTimeout(() => {
         this.scroller.scrollToAnchor(anchor);
       }, 100);
+    });
+
+    this.scrollService.menuOpen$.subscribe(isOpen => {
+      this.menuOpen = isOpen;
     });
   }
 

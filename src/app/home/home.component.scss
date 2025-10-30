@@ -9,6 +9,11 @@
   align-items: center;
   justify-content: center;
   margin-top: 114px;
+  &.menu-open {
+    margin-top: 454px;
+  }
+
+
 
   .hero-overlay {
     position: absolute;
