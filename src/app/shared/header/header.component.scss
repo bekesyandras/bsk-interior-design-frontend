@@ -24,6 +24,7 @@
 
 .logo {
   height: 90px;
+  flex-shrink: 0;
   object-fit: contain;
   display: block;
   cursor: pointer;
@@ -108,9 +109,5 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-  }
-
-  .logo {
-    height: 70px;
   }
 }
