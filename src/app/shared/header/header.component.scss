@@ -79,6 +79,21 @@
   gap: 1rem;
 }
 
+.header .nav.open {
+  display: block;
+  position: absolute;   /* ráúszik */
+  top: 90px;            /* a header alá kerül */
+  left: 0;
+  width: 100%;
+  background-color: #F5F0E6;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header.open {
+  height: auto;
+}
+
 // Mobilnézet
 @media (max-width: 880px) {
   .header .hamburger {
