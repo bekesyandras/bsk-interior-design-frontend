@@ -49,4 +49,8 @@ export class HeaderComponent implements OnInit{
   scrollToTop(): void {
     this.scroller.scrollToPosition([0, 0]);
   }
+
+  onMenuItemClick() {
+    this.menuOpen = false;
+  }
 }

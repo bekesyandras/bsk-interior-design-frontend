@@ -10,15 +10,15 @@
 
     <nav class="nav" [ngClass]="{ 'open': menuOpen }">
       <ul>
-        <li><a routerLink="/" (click)="scrollToTop()" [class.active]="isHomeActive && !isAboutActive"
+        <li><a routerLink="/" (click)="scrollToTop(); onMenuItemClick()" [class.active]="isHomeActive && !isAboutActive"
         >Home</a></li>
-        <li><a routerLink="/" (click)="onAboutClick()" [class.active]="isAboutActive"
+        <li><a routerLink="/" (click)="onAboutClick(); onMenuItemClick()" [class.active]="isAboutActive"
         >Rólam</a></li>
-        <li><a routerLink="/gallery" routerLinkActive="active"
+        <li><a routerLink="/gallery" routerLinkActive="active" (click)="onMenuItemClick()"
         >Galéria</a></li>
-        <li><a routerLink="/prices" routerLinkActive="active"
+        <li><a routerLink="/prices" routerLinkActive="active" (click)="onMenuItemClick()"
         >Árak</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active"
+        <li><a routerLink="/contact" routerLinkActive="active" (click)="onMenuItemClick()"
         >Kontakt</a></li>
       </ul>
     </nav>
