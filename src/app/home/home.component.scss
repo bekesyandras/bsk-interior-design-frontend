@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  //width: 100%;
+  width: 100%;
   background-image: url('/assets/images/hero-desktop.jpg');
   background-size: cover;
   background-position: center;
@@ -9,11 +9,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 114px;
-  &.menu-open {
-    margin-top: 454px;
-  }
-
-
+  overflow-x: hidden;
 
   .hero-overlay {
     position: absolute;
